@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    {% if usuarios %}
+        <ul>
+        {% for u in usuarios %}
+            <li>{{ u.nombre }} - {{ u.correo }} - {{ u.edad }} años</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay usuarios registrados.</p>
+    {% endif %}
+    <a href="#">Crear nuevo usuario</a>
+</body>
+</html>
