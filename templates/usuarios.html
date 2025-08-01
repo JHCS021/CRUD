@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +9,10 @@
     {% if usuarios %}
         <ul>
         {% for u in usuarios %}
-            <li>{{ u.nombre }} - {{ u.correo }} - {{ u.edad }} años</li>
+            <li>
+                {{ u.nombre }} - {{ u.correo }} - {{ u.edad }} años
+                <a href="{{ url_for('editar_usuario', id=loop.index0) }}">Editar</a>
+            </li>
         {% endfor %}
         </ul>
     {% else %}
